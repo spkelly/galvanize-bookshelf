@@ -16,6 +16,6 @@ exports.seed = function(knex, Promise) {
         })
       ]);
     }).then(function() {
-      return knex.raw("SELECT setval('books_id_seq', (SELECT MAX(id) FROM books))");
+      return knex.raw("SELECT setval('users_id_seq', (SELECT MAX(id) FROM users))");
     });
 };
